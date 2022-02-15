@@ -28,7 +28,7 @@ class User:
         return self
     
     def display_user_balance(self):
-        print(f"User: {self.username}, Balance: {self.account_balance}")
+        # print(f"User: {self.username}, Balance: {self.account_balance}")
         return self
     
 ellie = User("ellie","e.c@gmail.com")
