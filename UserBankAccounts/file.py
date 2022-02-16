@@ -35,7 +35,7 @@ class BankAccount:
             print(account.account_balance)
             
 class User:
-    def __int__ (self, name):
+    def __init__ (self, name):
         self.name = name
         self.account = {
             "checking": BankAccount(.15,20000),
