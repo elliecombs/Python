@@ -10,6 +10,13 @@ class Pirate:
         print(f"Name: {self.name}\nStrength: {self.strength}\nSpeed: {self.speed}\nHealth: {self.health}\n")
 
     def attack ( self , ninja ):
-        ninja.health -= self.strength
+        if self.speed >= 10: #Attack if Speed is greater than or equal 10 then the 
+            ninja.health -= (self.strength * 2)
+            self.speed = 3 #Check speed for next attack 
+        else: #regular attack
+            self.speed += 3
+            ninja.health -= self.strength
+        if ninja.health <= 0: #Evaluates the health status after the attacks
+            ninja.health = 0
+            print(f"{self.name} Finito Ninja!")
         return self
-
